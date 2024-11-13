@@ -1,0 +1,109 @@
+@font-face{font-family: bebas; 
+	src: url(fonts/Play-Regular.ttf);}
+
+
+body{
+	font-family: bebas;
+	margin: 0px;
+	color: black;
+	background: skyblue;
+}
+/*Top Part*/
+header{
+	height: 80px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+/*header h1{color: white;}*/
+
+/*Navigation Bar*/
+#menuic{
+	position: fixed;
+	top: auto;
+	margin: 10px;
+	cursor: pointer;
+	z-index: 2;
+	animation: idle;
+}
+@keyframes menIntro{
+	0%{opacity: 100%;}
+	95%{opacity: 5%;}
+	100%{opacity: 0%;visibility: hidden;}
+}
+@keyframes menOutro{
+	from{opacity: 0%;}
+	to{opacity: 100%;}
+}
+
+nav{
+	position: fixed;
+	top: 0px;
+	left: -160px;
+	height: 100vh;
+	width: 10%;
+	justify-content: center;
+	display: flex;
+	background: black;
+	z-index: 1;
+	animation: idle;
+}
+@keyframes transin{
+	from{left: -160px;}
+	to{left: 0px;}
+}
+@keyframes transout{
+	from{left: 0px;}
+	to{left: -160px;}
+}
+
+nav ul{
+	list-style: none;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 70px;
+	width: 100%;
+}
+nav ul li{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+}
+nav ul li a:hover{
+	text-decoration: underline;
+	cursor: default;
+}
+
+#closeMen{
+	cursor: pointer;
+}
+
+/*Middle*/
+.content{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 100px;
+	z-index: 0;
+}
+
+/*Mobile Responsiveness*/
+@media (max-width: 720px){
+	#menuic{
+		transform: scale(0.7);
+	}
+	nav{
+		width: 40%;
+	}
+	nav ul li{
+	margin-bottom: 10px;
+	}
+}
